@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question Game</title>
+</head>
+<body>
+    <script>
+        var game = [
+            { 
+                q:"Statue of Liberty is in Chicago.",
+                a:false
+            },
+            {
+                q:"Donald Trump is the President of USA.",
+                a:true
+            },
+            {
+                q:"Great Wall is in China.",
+                a:true
+            },
+            {
+                q:"Javascript and java are same.",
+                a:false
+            },
+            {
+                q:"J.K. Rowling wrote 'Harry Potter'",
+                a:true
+            }
+        ]
+    
+        var score = 0;
+        var wrong = 0;
+        var right = 0;
+
+    // console.log(game[0].q);
+    for (var i=0; i<game.length; i++){
+        var answer = confirm(game[i].q)
+        if (answer === game[i].a){
+            alert("You are write");
+            right = right + 1;
+
+        } else {
+            alert("You are wrong!");
+            wrong = wrong + 1;
+        }
+    }
+    alert("Your total score: "+ right * 10);
+    alert(right + " questions You answered correctly");
+    alert(wrong + " questions you answered wrong");
+    
+    </script>
+</body>
+</html>
